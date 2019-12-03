@@ -1,7 +1,8 @@
 <?php
-require_once SYS_PATH. 'core/Controller.php';
+namespace app\backend\controller;
+use Framework\core\Controller;
 
-class Index extends Controller
+class IndexController extends Controller
 {
     public function __construct()
     {

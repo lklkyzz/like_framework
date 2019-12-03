@@ -6,6 +6,5 @@ define('CONFIG_PATH', ROOT_PATH . 'config' . DIRECTORY_SEPARATOR); //配置根�
 
 require SYS_PATH . 'Framework.php';
 $GLOBALS['config'] = require_once CONFIG_PATH . 'app.php';//临时存放
-
 $app = new Framework();
 $app->run();

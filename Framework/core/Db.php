@@ -1,4 +1,8 @@
 <?php
+namespace Framework\core;
+/**
+ * 数据库类
+ */
 class Db
 {
     private $dbLink;
@@ -7,7 +11,7 @@ class Db
     public $rows;
 
     /**
-     * 数据库类
+     * @param array 连接参数
      */
     private function __construct($config)
     {
@@ -22,6 +26,11 @@ class Db
     {
     }
 
+    /**
+     * 获取类实例
+     * @param array 连接参数
+     * @return object 类实例
+     */
     public static function getInstance($config)
     {
         if (!(self::$instance instanceof self)) {
@@ -31,6 +40,10 @@ class Db
         return self::$instance;
     }
 
+    /**
+     * 连接数据库
+     * @param array 连接参数
+     */
     public function connect($format)
     {
         try {
@@ -46,6 +59,7 @@ class Db
      * @param string $sql 查询语句
      * @param array $bind 查询参数
      * @param const $type 查询结果类型
+     * @return array
      */
     public function query($sql, $bind = [], $type = PDO::FETCH_ASSOC)
     {
@@ -64,6 +78,7 @@ class Db
      * 执行语句
      * @param string $sql 执行语句
      * @param array $bind 查询参数
+     * @return array
      */
     public function execute($sql, $bind = [])
     {

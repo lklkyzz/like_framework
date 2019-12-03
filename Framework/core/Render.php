@@ -1,4 +1,5 @@
 <?php
+namespace Framework\core;
 /**
  * 视图模板引擎
  */
