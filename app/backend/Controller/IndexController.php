@@ -13,11 +13,10 @@ class IndexController extends Controller
 
     public function index()
     {
-        $this->assign('name', $_GET['name']);
-        // $ret = $this->db()->query('select * from demo');
+        $ret = $this->db()->query('select * from demo');
         // $ret = $this->Db->execute('insert into demo (name) values(?)', ['kk']);
-        // print_r($ret);
-        $this->display('index/index');
+        $this->assign('data', $ret);
+        // $this->display('index/index');
     }
 
     public function millisecond()

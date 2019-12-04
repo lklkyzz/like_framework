@@ -1,0 +1,5 @@
+错误级别：8|错误描述：Undefined variable: GET|错误所在文件：D:\web\like_framework\app\backend\controller\IndexController.php|错误所在行：16
+错误级别：8|错误描述：Undefined variable: GET|错误所在文件：D:\web\like_framework\app\backend\controller\IndexController.php|错误所在行：16
+错误级别：8|错误描述：Undefined variable: GET|错误所在文件：D:\web\like_framework\app\backend\controller\IndexController.php|错误所在行：16
+2019-12-04 08:14:43 错误级别：2|错误描述：require_once(D:\web\like_framework\public\..\Framework\core\PDO.php): failed to open stream: No such file or directory|错误所在文件：D:\web\like_framework\Framework\core\Loader.php|错误所在行：13
+2019-12-04 08:28:50 错误级别：8|错误描述：Undefined variable: name|错误所在文件：D:\web\like_framework\app\backend\view\index\index.html|错误所在行：2

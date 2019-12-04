@@ -47,8 +47,8 @@ class Db
     public function connect($format)
     {
         try {
-            $this->dbLink = new PDO($format['dns'], $format['username'], $format['pwd']);
-        } catch (\PODException $e) {
+            $this->dbLink = new \PDO($format['dns'], $format['username'], $format['pwd']);
+        } catch (\PDOException $e) {
             throw $e; //记录到日志后往上抛
         }
 
@@ -61,10 +61,10 @@ class Db
      * @param const $type 查询结果类型
      * @return array
      */
-    public function query($sql, $bind = [], $type = PDO::FETCH_ASSOC)
+    public function query($sql, $bind = [], $type = \PDO::FETCH_ASSOC)
     {
         if (!$this->dbLink) {
-            throw new Exception('db connection failed');
+            throw new \Exception('db connection failed');
         }
 
         $this->PDOStatement = $this->dbLink->prepare($sql);
@@ -83,7 +83,7 @@ class Db
     public function execute($sql, $bind = [])
     {
         if (!$this->dbLink) {
-            throw new Exception('db connection failed');
+            throw new \Exception('db connection failed');
         }
 
         $this->PDOStatement = $this->dbLink->prepare($sql);
