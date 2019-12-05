@@ -13,4 +13,9 @@ return [
         'username'   => 'root',      //数据库连接用户名
         'pwd'    => '123456',    //对应的密码
     ],
+
+    'interceptorArr' => [
+        'app\backend\interceptor\LoginInterceptor' => '*',
+        'app\backend\interceptor\AccessInterceptor' => 'backend\/in(.*)',
+    ],
 ];

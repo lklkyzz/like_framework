@@ -7,16 +7,23 @@ class IndexController extends Controller
     public function __construct()
     {
         parent::__construct();
-        // require_once SYS_PATH . 'core/Db.php';
-        // $this->Db = Db::getInstance($GLOBALS['config']['mysql']);
     }
+    
+    /**
+     * 类前置拦截器
+     */
+    // public function _before_()
+    // {
+    //     echo 'before<br>';
+    // }
 
     public function index()
     {
-        $ret = $this->db()->query('select * from demo');
+        // $ret = $this->db()->query('select * from demo');
         // $ret = $this->Db->execute('insert into demo (name) values(?)', ['kk']);
-        $this->assign('data', $ret);
+        // $this->assign('data', $ret);
         // $this->display('index/index');
+        // echo '<br>';
     }
 
     public function millisecond()
