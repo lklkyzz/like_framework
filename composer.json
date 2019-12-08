@@ -1,0 +1,24 @@
+{
+    "name": "like/like",
+    "description": "The Like Framewrok",
+    "type": "project",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "随机的鲤鱼王",
+            "email": "lklkyzz@github.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "illuminate/database": "6.x",
+        "illuminate/routing": "6.x"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework",
+            "app\\": "app"
+        }
+    }
+}

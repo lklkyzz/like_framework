@@ -9,8 +9,9 @@ class Framework
      */
     public function run()
     {
-        require_once 'core/Loader.php';
-        spl_autoload_register(['Framework\core\Loader', 'loadCoreClass']);
+        //使用composer自动加载
+        // require_once 'core/Loader.php';
+        // spl_autoload_register(['Framework\core\Loader', 'loadCoreClass']);
         $this->route();
         $this->dispatch();
     }
